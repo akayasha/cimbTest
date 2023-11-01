@@ -6,6 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+
+
 
 import java.util.List;
 import java.util.Optional;
@@ -33,8 +38,8 @@ public class BlogPostController {
     }
 
     @GetMapping
-    public ResponseEntity<List<BlogPost>> getAllBlogPosts() {
-        List<BlogPost> posts = blogPostRepository.findAll();
+    public ResponseEntity<Page<BlogPost>> getAllBlogPosts(Pageable pageable) {
+        Page<BlogPost> posts = blogPostRepository.findAll(pageable);
         return ResponseEntity.ok(posts);
     }
 
