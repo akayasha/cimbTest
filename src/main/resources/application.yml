@@ -9,9 +9,9 @@ spring:
       enabled: 'true'
       max-request-size: 1000MB
   datasource:
-    password: pass
+    password: AaBeGD56H21ha53g64AhHBaBHb3b4Dd3
     username: root
-    url: jdbc:mysql://localhost:3306/cimb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mysql://roundhouse.proxy.rlwy.net:45141:railway
   jpa:
     hibernate:
       ddl-auto: update
